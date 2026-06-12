@@ -1,0 +1,27 @@
+.view-page {
+  text-align: left;
+}
+
+.view-page h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #303133;
+}
+
+.view-page p {
+  margin: 8px 0;
+}
+
+.view-page button {
+  margin-right: 8px;
+}
+
+.view-page ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.view-page input {
+  margin-left: 4px;
+}
