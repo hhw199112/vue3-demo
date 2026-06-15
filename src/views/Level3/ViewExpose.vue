@@ -64,7 +64,8 @@
     <section class="code-section">
       <h3 class="section-title">源码文件</h3>
 
-      <div class="code-panel">
+      <div class="code-panels">
+        <div class="code-panel">
         <div class="code-panel-header">
           <span class="code-dot"></span>
           <span class="code-dot"></span>
@@ -77,6 +78,23 @@
   <code>{{ vueCode }}</code>
           </pre>
       </div>
+
+      <div class="code-panel">
+        <div class="code-panel-header">
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+
+          <span class="code-filename"> ChildComponent.vue </span>
+        </div>
+
+        <pre class="code-block">
+  <code>{{ vueCode2 }}</code>
+          </pre>
+      </div>
+      </div>
+
+   
     </section>
   </div>
 </template>
@@ -87,6 +105,8 @@ import { ref } from "vue";
 import ChildExpose from "@/components/ChildExpose.vue";
 
 import vueCode from "!!raw-loader!@/views/Level3/ViewExpose.vue?raw";
+import vueCode2 from "!!raw-loader!@/components/ChildComponent.vue?raw";
+
 
 const childRef = ref();
 
@@ -228,6 +248,13 @@ function ParentShowVal() {
 
 .code-section {
   margin-top: 10px;
+}
+
+.code-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
 }
 
 .code-panel {
