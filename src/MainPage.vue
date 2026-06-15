@@ -19,6 +19,7 @@ import ViewDefineEmits from "./views/Level3/ViewDefineEmits.vue";
 import ViewProvide from "./views/Level3/ViewProvide.vue";
 import ViewRouter from "./views/Level5/ViewRouter.vue";
 import ViewSlot from "./views/Level3/ViewSlot.vue";
+import ViewExpose from "./views/Level3/ViewExpose.vue";
 const menus = [
   {
     id: "Level1",
@@ -52,7 +53,8 @@ const menus = [
         component: ViewDefineEmits,
       },
       { id: "ViewProvide", label: "Provide & Inject", component: ViewProvide },
-      {id:"ViewSlot",label:"插槽",component:ViewSlot}
+      { id: "ViewSlot", label: "插槽", component: ViewSlot },
+      { id: "ViewExpose", label: "Expose", component: ViewExpose },
     ],
   },
   {
