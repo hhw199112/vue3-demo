@@ -22,6 +22,7 @@ import ViewSlot from "./views/Level3/ViewSlot.vue";
 import ViewExpose from "./views/Level3/ViewExpose.vue";
 import ViewDefineOptions from "./views/Level3/ViewDefineOptions.vue";
 import ViewTeleport from "./views/Level3/ViewTeleport.vue";
+import VueSuspense from "./views/Level3/ViewSuspense.vue";
 const menus = [
   {
     id: "Level1",
@@ -58,7 +59,8 @@ const menus = [
       { id: "ViewSlot", label: "插槽", component: ViewSlot },
       { id: "ViewExpose", label: "Expose", component: ViewExpose },
       {id:"ViewDefineOptions",label:"DefineOptions",component:ViewDefineOptions},
-      {id:"ViewTeleport",label:"Teleport",component:ViewTeleport}
+      {id:"ViewTeleport",label:"Teleport",component:ViewTeleport},
+      {id:"ViewSuspense",label:"Suspense",component:VueSuspense}
     ],
   },
   {

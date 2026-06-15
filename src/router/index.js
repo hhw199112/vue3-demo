@@ -1,17 +1,18 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from "vue-router"
 
-import Login from "@/LoginPage.vue"
+import Welcome from "@/WelcomePage.vue"
+/*import Login from "@/LoginPage.vue"*/
 import Main from "@/MainPage.vue"
 
 const routes = [
   {
     path: "/",
-    redirect: "/login"
+    redirect: "/Welcome"
   },
   {
-    path: "/login",
-    component: Login
+    path: "/Welcome",
+    component: Welcome
   },
   {
     path: "/main",
