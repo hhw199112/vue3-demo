@@ -31,59 +31,58 @@
       </aside>
 
       <main class="content-area">
-        <component
-          v-if="activeComponent"
-          :is="activeComponent"
-        />
-        <div v-else class="content-placeholder">
-          <p>请从左侧子菜单选择要查看的内容</p>
-        </div>
+         
+          <component v-if="activeComponent" :is="activeComponent" />
+          <div v-else class="content-placeholder">
+            <p>请从左侧子菜单选择要查看的内容</p>
+          </div>
+        
       </main>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed, onMounted, ref, defineProps } from 'vue'
+import { computed, onMounted, ref, defineProps } from "vue";
 
 const props = defineProps({
   menus: {
     type: Array,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 
-const activeMenuId = ref(null)
-const activeSubmenuId = ref(null)
+const activeMenuId = ref(null);
+const activeSubmenuId = ref(null);
 
-const activeMenu = computed(() =>
-  props.menus.find((menu) => menu.id === activeMenuId.value) ?? null
-)
+const activeMenu = computed(
+  () => props.menus.find((menu) => menu.id === activeMenuId.value) ?? null
+);
 
 const activeComponent = computed(() => {
-  if (!activeMenu.value || !activeSubmenuId.value) return null
+  if (!activeMenu.value || !activeSubmenuId.value) return null;
   const item = activeMenu.value.children.find(
     (child) => child.id === activeSubmenuId.value
-  )
-  return item?.component ?? null
-})
+  );
+  return item?.component ?? null;
+});
 
 function selectMenu(menuId) {
-  if (activeMenuId.value === menuId) return
-  activeMenuId.value = menuId
-  const menu = props.menus.find((item) => item.id === menuId)
-  activeSubmenuId.value = menu?.children[0]?.id ?? null
+  if (activeMenuId.value === menuId) return;
+  activeMenuId.value = menuId;
+  const menu = props.menus.find((item) => item.id === menuId);
+  activeSubmenuId.value = menu?.children[0]?.id ?? null;
 }
 
 function selectSubmenu(submenuId) {
-  activeSubmenuId.value = submenuId
+  activeSubmenuId.value = submenuId;
 }
 
 onMounted(() => {
   if (props.menus.length > 0) {
-    selectMenu(props.menus[0].id)
+    selectMenu(props.menus[0].id);
   }
-})
+});
 </script>
 
 <style scoped>
