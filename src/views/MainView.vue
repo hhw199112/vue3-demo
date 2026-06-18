@@ -41,21 +41,14 @@
       </main>
     </div>
 
-    <div style="text-align:center;margin-top: -15px">
-      <router-link to="/privacy" class="privacy-link">隐私政策
-      </router-link>&nbsp;&nbsp;
-      <router-link to="/about" class="privacy-link">关于我们
-      </router-link>&nbsp;&nbsp;
-      <router-link to="/contact" class="privacy-link">联系我们
-      </router-link>
-      </div>
+    <footer-links></footer-links>
   </div>
 </template>
 
 <script setup>
 import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
-
+import FooterLinks from "./FooterLinks.vue";
 const router = useRouter();
 const route = useRoute();
 
