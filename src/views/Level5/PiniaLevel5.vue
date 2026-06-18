@@ -58,7 +58,7 @@ import jsCode from '!!raw-loader!@/store/user'
 const userStore = useUserStore()
 
 function changeState() {
-  userStore.name = '侯鸿伟'
+  userStore.name = '尼古拉'
   userStore.age++
   userStore.add()
 }
