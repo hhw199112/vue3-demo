@@ -44,6 +44,14 @@
 
 const steps = [
   {
+      text:"在命令行里输入以下命令，创建一个 Vue 全局变量,第一次创建后后续不用再次创建：",
+      command:"npm install -g vue"
+  },
+  {
+      text:"在命令行里输入以下命令，创建一个 Vue 脚手架,第一次创建后后续不用再次创建：",
+      command:"npm install -g @vue/cli"
+  },
+  {
     text: '在命令行里输入以下命令，创建一个 Vue 项目：',
     command: 'vue create vue3-demo'
   },
