@@ -46,6 +46,7 @@ import ViewRouter from "@/views/Level5/ViewRouter.vue"
 
 import Privacy from "@/PrivacyPage.vue"
 import AboutPage from "@/AboutPage.vue"
+import ContactPage from "@/ContactPage.vue"
 
 const routes = [
   {
@@ -64,6 +65,10 @@ const routes = [
   {
     path:"/about",
     component:AboutPage
+  },
+  {
+    path:"/contact",
+    component:ContactPage
   },
 
   /* ================= Layout ================= */
