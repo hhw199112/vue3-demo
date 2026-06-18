@@ -8,8 +8,8 @@ import MainLayout from "@/views/MainView.vue"
 import Welcome from "@/WelcomePage.vue"
 
 /* Level1 */
-import VueBasic from "@/views/Level1/VueBasic.vue"
-import VueSetup from "@/views/Level1/VueSetup.vue"
+import ViewBasic from "@/views/Level1/ViewBasic.vue"
+import VieSetup from "@/views/Level1/ViewSetup.vue"
 import ViewTemplateBase from "@/views/Level1/ViewTemplateBase.vue"
 import ViewTemplateAdvance from "@/views/Level1/ViewTemplateAdvance.vue"
 
@@ -81,21 +81,28 @@ const routes = [
       /* ================= Level1 ================= */
       {
         path: "level1/basic",
-        component: VueBasic,
+        component: ViewBasic,
         meta: {
           group: "Level1",
           groupName: "Vue3 基础语法",
-          title: "创建Vue项目"
+          subtitle: "创建Vue项目",
+          title: 'Vue3 项目创建教程 | vue3.tech',
+          description: '使用 Vue CLI 创建 Vue3 项目，包含环境要求、安装步骤、命令示例等完整教程。',
+          keywords: 'Vue3 创建项目, Vue CLI, Vue3 教程, Vue3 入门'
         }
       },
       {
         path: "level1/setup",
-        component: VueSetup,
+        component: VieSetup,
         meta: {
           group: "Level1",
           groupName: "Vue3 基础语法",
-          title: "Setup的使用"
+          subtitle: "Setup的使用",
+          title: "Vue3 Setup 教程：ref、computed、watch、方法定义与 Vue2 对比 | vue3.tech",
+          description: "Vue3 Setup 组合式 API 全面讲解，包括 ref 响应式数据、computed 计算属性、watch 监听、方法定义方式，以及与 Vue2 的详细对比，并附带完整示例代码与演示。适合 Vue3 初学者快速掌握核心用法。",
+          keywords: "Vue3 Setup, Vue3 组合式API, ref, computed, watch, Vue3 教程, Vue2 对比, Vue3 入门"
         }
+        
       },
       {
         path: "level1/template-base",
@@ -103,8 +110,12 @@ const routes = [
         meta: {
           group: "Level1",
           groupName: "Vue3 基础语法",
-          title: "基础模板语法"
+          subtitle: "基础模板语法",
+          title: "Vue3 模板基础语法：v-text、v-html、v-bind、v-on 全面讲解与示例 | vue3.tech",
+          description: "Vue3 模板基础语法详解，包括 v-text、v-html、v-bind、v-on 以及插值表达式的使用方式，并提供完整 Demo 演示与应用场景说明，帮助初学者快速掌握 Vue3 模板指令的核心用法。",
+          keywords: "Vue3 模板语法, v-text, v-html, v-bind, v-on, Vue3 指令, Vue3 教程, Vue3 入门"
         }
+        
       },
       {
         path: "level1/template-advance",
@@ -112,7 +123,10 @@ const routes = [
         meta: {
           group: "Level1",
           groupName: "Vue3 基础语法",
-          title: "高级模板语法"
+          subtitle: "高级模板语法",
+          title: "Vue3 模板高级语法详解：v-show、v-if、v-for、v-once、v-memo 全面示例 | vue3.tech",
+          description: "深入讲解 Vue3 模板高级语法，包括 v-show、v-if、v-for、v-once、v-cloak、v-memo 的使用方式、性能差异、适用场景与完整 Demo 示例。通过实际代码演示帮助你快速掌握 Vue3 模板指令的高级用法。",
+          keywords: "Vue3 模板语法, Vue3 指令, v-show, v-if, v-for, v-once, v-memo, Vue3 性能优化, Vue3 教程"
         }
       },
 
@@ -123,7 +137,7 @@ const routes = [
         meta: {
           group: "Level2",
           groupName: "Composition API",
-          title: "Ref的使用"
+          subtitle: "Ref的使用"
         }
       },
       {
@@ -132,7 +146,7 @@ const routes = [
         meta: {
           group: "Level2",
           groupName: "Composition API",
-          title: "Reactive的使用"
+          subtitle: "Reactive的使用"
         }
       },
       {
@@ -141,7 +155,7 @@ const routes = [
         meta: {
           group: "Level2",
           groupName: "Composition API",
-          title: "Lifecycle的使用"
+          subtitle: "Lifecycle的使用"
         }
       },
       {
@@ -150,7 +164,7 @@ const routes = [
         meta: {
           group: "Level2",
           groupName: "Composition API",
-          title: "nextTick的使用"
+          subtitle: "nextTick的使用"
         }
       },
 
@@ -161,7 +175,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          title: "defineProps"
+          subtitle: "defineProps"
         }
       },
       {
@@ -170,7 +184,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          title: "defineEmits"
+          subtitle: "defineEmits"
         }
       },
       {
@@ -179,7 +193,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          title: "Provide & Inject"
+          subtitle: "Provide & Inject"
         }
       },
       {
@@ -188,7 +202,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          title: "Slot"
+          subtitle: "Slot"
         }
       },
       {
@@ -197,7 +211,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          title: "Expose"
+          subtitle: "Expose"
         }
       },
       {
@@ -206,7 +220,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          title: "DefineOptions"
+          subtitle: "DefineOptions"
         }
       },
       {
@@ -215,7 +229,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          title: "Teleport"
+          subtitle: "Teleport"
         }
       },
       {
@@ -224,7 +238,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          title: "Suspense"
+          subtitle: "Suspense"
         }
       },
       {
@@ -233,7 +247,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          title: "动态组件 & KeepAlive"
+          subtitle: "动态组件 & KeepAlive"
         }
       },
       {
@@ -242,7 +256,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          title: "V-Model"
+          subtitle: "V-Model"
         }
       },
 
@@ -254,7 +268,7 @@ const routes = [
         meta: {
           group: "Basic",
           groupName: "基础功能",
-          title: "计数器演示"
+          subtitle: "计数器演示"
         }
       },
       {
@@ -263,7 +277,7 @@ const routes = [
         meta: {
           group: "Basic",
           groupName: "基础功能",
-          title: "产品信息"
+          subtitle: "产品信息"
         }
       },
       */
@@ -274,7 +288,7 @@ const routes = [
         meta: {
           group: "Level4",
           groupName: "Vue3企业开发核心",
-          title: "组合式函数"
+          subtitle: "组合式函数"
         }
       },
 
@@ -285,7 +299,7 @@ const routes = [
         meta: {
           group: "Level5",
           groupName: "企业项目开发",
-          title: "Pinia状态管理"
+          subtitle: "Pinia状态管理"
         }
       },
       {
@@ -294,7 +308,7 @@ const routes = [
         meta: {
           group: "Level5",
           groupName: "企业项目开发",
-          title: "Axios二次封装"
+          subtitle: "Axios二次封装"
         }
       },
       {
@@ -303,7 +317,7 @@ const routes = [
         meta: {
           group: "Level5",
           groupName: "企业项目开发",
-          title: "路由管理"
+          subtitle: "路由管理"
         }
       }
     ]
@@ -314,5 +328,37 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
+
+router.beforeEach((to, from, next) => {
+  // 设置标题
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+
+  const setMeta = (name, content) => {
+    if (!content) return
+
+    let meta = document.querySelector(`meta[name="${name}"]`)
+
+    // 如果不存在则创建
+    if (!meta) {
+      meta = document.createElement('meta')
+      meta.setAttribute('name', name)
+      document.head.appendChild(meta)
+    }
+
+    // 更新内容
+    meta.setAttribute('content', content)
+  }
+
+  // 设置 description
+  setMeta('description', to.meta.description)
+
+  // 设置 keywords
+  setMeta('keywords', to.meta.keywords)
+
+  next()
+})
+
 
 export default router

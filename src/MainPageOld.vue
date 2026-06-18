@@ -10,8 +10,8 @@ import ProductView from "./views/ProductView.vue";
 import PiniaLevel5 from "./views/Level5/PiniaLevel5.vue";
 import AxiosLevel5 from "./views/Level5/AxiosLevel5.vue";
 /*level1*/
-import VueBasic from "./views/Level1/VueBasic.vue";
-import VueSetup from "./views/Level1/VueSetup.vue";
+import VueBasic from "./views/Level1/ViewBasic.vue";
+import VueSetup from "./views/Level1/ViewSetup.vue";
 //import ViewTemplate from "./views/Level1/ViewTemplate.vue";
 import ViewDefineProps from "./views/Level3/ViewDefineProps.vue";
 import ViewDefineEmits from "./views/Level3/ViewDefineEmits.vue";

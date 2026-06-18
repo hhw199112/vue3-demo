@@ -30,7 +30,7 @@
             :class="{ active: route.path === fullPath(item.path) }"
             @click="router.push(fullPath(item.path))"
           >
-            {{ item.meta.title }}
+            {{ item.meta.subtitle }}
           </li>
         </ul>
       </aside>

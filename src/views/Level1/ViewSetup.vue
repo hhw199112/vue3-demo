@@ -65,7 +65,7 @@
 </template>
 
 <script setup>
-import vueCode from '!!raw-loader!@/views/Level1/VueSetup.vue?raw'
+import vueCode from '!!raw-loader!@/views/Level1/ViewSetup.vue?raw'
 import { ref, computed, watch } from 'vue'
 
 const compareItems = [
