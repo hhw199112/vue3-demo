@@ -48,6 +48,7 @@ import Privacy from "@/PrivacyPage.vue"
 import AboutPage from "@/AboutPage.vue"
 import ContactPage from "@/ContactPage.vue"
 
+
 const routes = [
   {
     path: "/",
@@ -56,7 +57,13 @@ const routes = [
 
   {
     path: "/welcome",
-    component: Welcome
+    component: Welcome,
+    meta:{
+      title: "Vue3 Learning System 欢迎页：Vue3 核心特性与学习引导 | vue3.tech",
+      description: "Vue3 Learning System 是一个用于学习 Vue3 Composition API 的实验性项目，展示 Vue3 的核心特性，包括组合式 API、响应式系统、Teleport、Suspense、Pinia 等内容。欢迎页采用动态背景与动画效果，并将在数秒后自动进入主系统。",
+      keywords: "Vue3 Learning System, Vue3 学习系统, Vue3 Composition API, Vue3 特性, Vue3 入门, Vue3 教程"
+    }
+    
   },
   {
     path:"/privacy",
