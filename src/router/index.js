@@ -192,8 +192,12 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "defineProps"
+          subtitle: "defineProps",
+          title: "Vue3 defineProps 使用详解：父子组件通信、Props 特点与完整示例 | vue3.tech",
+          description: "Vue3 defineProps 的完整教程，讲解父组件向子组件传递数据的方式、Props 的核心特点、子组件展示逻辑，并通过商品名称示例演示父子组件通信的响应式更新机制，附带完整源码文件。",
+          keywords: "Vue3 defineProps, Vue3 Props, 父子组件通信, Vue3 组件传值, Vue3 教程, Vue3 组合式API"
         }
+        
       },
       {
         path: "level3/define-emits",
@@ -201,8 +205,12 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "defineEmits"
+          subtitle: "defineEmits",
+          title: "Vue3 defineEmits 使用详解：子组件向父组件发送事件与参数回传示例 | vue3.tech",
+          description: "Vue3 defineEmits 的完整教程，讲解子组件如何通过 emit() 向父组件发送事件，包括 send、delete、delete-with-id、delete-by-props-id 等多种事件触发方式，并展示父组件如何接收参数与处理逻辑，附带完整父子组件源码示例。",
+          keywords: "Vue3 defineEmits, Vue3 emit, 子组件向父组件通信, Vue3 事件传递, Vue3 组件通信, Vue3 教程"
         }
+        
       },
       {
         path: "level3/provide",
@@ -210,8 +218,12 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "Provide & Inject"
+          subtitle: "Provide & Inject",
+          title: "Vue3 Provide / Inject 使用详解：跨层级组件通信与响应式数据共享 | vue3.tech",
+          description: "Vue3 Provide / Inject 的完整教程，讲解如何在祖先组件与后代组件之间共享数据，避免多层 Props 传递。包含响应式 ref 提供方式、子组件注入示例、动态数据更新演示，以及完整源码文件，帮助你深入理解跨层级组件通信机制。",
+          keywords: "Vue3 Provide, Vue3 Inject, 跨层级通信, Vue3 组件通信, Vue3 数据共享, Vue3 教程, Vue3 组合式API"
         }
+        
       },
       {
         path: "level3/slot",
@@ -219,8 +231,12 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "Slot"
+          subtitle: "Slot",
+          title: "Vue3 插槽 Slots 使用详解：默认插槽、具名插槽、作用域插槽完整示例 | vue3.tech",
+          description: "Vue3 插槽（Slots）完整教程，讲解默认插槽、具名插槽与作用域插槽的使用方式，展示父组件如何向子组件传递结构化内容，以及子组件如何通过作用域插槽向父组件暴露数据。附带多个插槽组件的完整源码示例。",
+          keywords: "Vue3 插槽, Vue3 Slots, 默认插槽, 具名插槽, 作用域插槽, Vue3 组件内容分发, Vue3 教程"
         }
+        
       },
       {
         path: "level3/expose",
@@ -228,8 +244,12 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "Expose"
+          subtitle: "Expose",
+          title: "Vue3 defineExpose 使用详解：父组件调用子组件方法与变量的完整示例 | vue3.tech",
+          description: "Vue3 defineExpose 的完整教程，讲解如何在 script setup 中向父组件公开变量与方法，使父组件能够通过 ref 获取子组件实例并调用其公开成员。包含方法调用示例、变量读取示例，以及父子组件完整源码展示。",
+          keywords: "Vue3 defineExpose, Vue3 子组件方法, Vue3 父组件调用子组件, Vue3 组件实例, Vue3 教程, Vue3 组合式API"
         }
+        
       },
       {
         path: "level3/define-options",
@@ -237,8 +257,12 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "DefineOptions"
+          subtitle: "DefineOptions",
+          title: "Vue3 子组件使用示例：组件引入与样式传递 | vue3.tech",
+          description: "Vue3 子组件使用的基础示例，展示如何在父组件中引入子组件并通过 class 传递样式。适合初学者理解组件复用与样式控制的基本方式。",
+          keywords: "Vue3 子组件, Vue3 组件引入, Vue3 class 样式, Vue3 教程, Vue3 组件复用"
         }
+        
       },
       {
         path: "level3/teleport",
@@ -246,8 +270,12 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "Teleport"
+          subtitle: "Teleport",
+          title: "Vue3 Teleport 使用详解：弹窗、抽屉、全局组件渲染示例 | vue3.tech",
+          description: "Vue3 Teleport 的完整教程，讲解如何将组件渲染到 body 或指定 DOM 节点，适用于 Dialog、Drawer、Message、Loading 等全局组件场景。包含弹窗示例、挂载机制说明以及完整源码展示，帮助你深入理解 Teleport 的使用方式。",
+          keywords: "Vue3 Teleport, Vue3 弹窗, Vue3 全局组件, Teleport 示例, Vue3 Dialog, Vue3 Drawer, Vue3 教程"
         }
+        
       },
       {
         path: "level3/suspense",
@@ -255,8 +283,12 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "Suspense"
+          subtitle: "Suspense",
+          title: "Vue3 Suspense 使用详解：异步组件加载、Fallback 占位与完整示例 | vue3.tech",
+          description: "Vue3 Suspense 的完整教程，讲解如何处理异步组件与异步 setup()，并通过 default 与 fallback 插槽展示加载占位界面。包含 UserInfo 异步加载示例、常见应用场景说明以及完整源码展示，帮助你掌握 Suspense 的实际使用方式。",
+          keywords: "Vue3 Suspense, 异步组件, fallback 插槽, Vue3 异步加载, defineAsyncComponent, Vue3 教程, Vue3 组合式API"
         }
+        
       },
       {
         path: "level3/dynamic-component",
@@ -264,8 +296,12 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "动态组件 & KeepAlive"
+          subtitle: "动态组件 & KeepAlive",
+          title: "Vue3 动态组件与 KeepAlive 使用详解：组件缓存、状态保留与完整示例 | vue3.tech",
+          description: "Vue3 动态组件与 KeepAlive 的完整教程，讲解如何通过 component 切换组件，并使用 KeepAlive 缓存组件实例以保留内部状态。包含 exclude 排除缓存示例、无 KeepAlive 对比示例，以及 Tab 标签页、表单、后台系统等常见应用场景与完整源码展示。",
+          keywords: "Vue3 KeepAlive, Vue3 动态组件, component is, 组件缓存, Vue3 exclude include, Vue3 状态保留, Vue3 教程"
         }
+        
       },
       {
         path: "level3/v-model",
@@ -273,8 +309,12 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "V-Model"
+          subtitle: "V-Model",
+          title: "Vue3 自定义组件 v-model 使用详解：双向绑定机制与完整示例 | vue3.tech",
+          description: "Vue3 自定义组件 v-model 的完整教程，讲解 v-model 的底层原理（modelValue + update:modelValue），并通过 UserInput 示例展示父子组件之间的双向绑定机制。包含多个 v-model 的使用说明、常见应用场景以及完整源码展示。",
+          keywords: "Vue3 v-model, 自定义组件 v-model, modelValue, update:modelValue, Vue3 双向绑定, Vue3 Input 组件, Vue3 教程"
         }
+        
       },
 
       /* ================= Basic ================= */
