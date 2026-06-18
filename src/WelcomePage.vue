@@ -34,7 +34,7 @@ const router = useRouter();
 
 onMounted(() => {
   setTimeout(() => {
-    router.replace("/main"); // 跳转主页面
+    router.push("/main"); // 跳转主页面
   }, 5000); // 2.5秒后跳转
 });
 </script>

@@ -1,88 +1,112 @@
 <template>
   <div class="main-layout">
+    <!-- 顶部菜单 -->
     <header class="top-menu">
       <nav class="top-menu-nav">
         <button
-          v-for="menu in menus"
-          :key="menu.id"
+          v-for="item in topMenus"
+          :key="item.id"
           class="top-menu-item"
-          :class="{ active: activeMenuId === menu.id }"
-          @click="selectMenu(menu.id)"
+          :class="{ active: item.id === currentGroup }"
+          @click="goGroup(item.id)"
         >
-          {{ menu.label }}
+          {{ item.name }}
         </button>
       </nav>
     </header>
 
     <div class="body-area">
-      <aside v-if="activeMenu" class="submenu-panel">
-        <h3 class="submenu-title">{{ activeMenu.id }}</h3>
+      <!-- 左侧菜单 -->
+      <aside class="submenu-panel">
+        <h3 class="submenu-title">
+          {{ currentGroup }}
+        </h3>
+
         <ul class="submenu-list">
           <li
-            v-for="item in activeMenu.children"
-            :key="item.id"
+            v-for="item in leftMenus"
+            :key="item.path"
             class="submenu-item"
-            :class="{ active: activeSubmenuId === item.id }"
-            @click="selectSubmenu(item.id)"
+            :class="{ active: route.path === fullPath(item.path) }"
+            @click="router.push(fullPath(item.path))"
           >
-            {{ item.label }}
+            {{ item.meta.title }}
           </li>
         </ul>
       </aside>
 
+      <!-- 内容区域 -->
       <main class="content-area">
-         
-          <component v-if="activeComponent" :is="activeComponent" />
-          <div v-else class="content-placeholder">
-            <p>请从左侧子菜单选择要查看的内容</p>
-          </div>
-        
+        <router-view />
       </main>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed, onMounted, ref, defineProps } from "vue";
+import { computed } from "vue";
+import { useRoute, useRouter } from "vue-router";
 
-const props = defineProps({
-  menus: {
-    type: Array,
-    required: true,
-  },
+const router = useRouter();
+const route = useRoute();
+
+/**
+ * 当前所有 /main 子路由
+ */
+const childRoutes =
+  router.options.routes.find((r) => r.path === "/main")?.children || [];
+
+/**
+ * 当前分组
+ */
+const currentGroup = computed(() => route.meta?.group);
+
+/**
+ * 当前分组名称
+ */
+//const currentGroupName = computed(() => route.meta?.groupName)
+
+/**
+ * 顶部菜单（去重 group）
+ */
+const topMenus = computed(() => {
+  const map = {};
+
+  childRoutes.forEach((r) => {
+    if (r.meta?.group) {
+      map[r.meta.group] = r.meta.groupName;
+    }
+  });
+
+  return Object.keys(map).map((key) => ({
+    id: key,
+    name: map[key],
+  }));
 });
 
-const activeMenuId = ref(null);
-const activeSubmenuId = ref(null);
-
-const activeMenu = computed(
-  () => props.menus.find((menu) => menu.id === activeMenuId.value) ?? null
-);
-
-const activeComponent = computed(() => {
-  if (!activeMenu.value || !activeSubmenuId.value) return null;
-  const item = activeMenu.value.children.find(
-    (child) => child.id === activeSubmenuId.value
-  );
-  return item?.component ?? null;
+/**
+ * 左侧菜单（当前 group）
+ */
+const leftMenus = computed(() => {
+  return childRoutes.filter((r) => r.meta?.group === currentGroup.value);
 });
 
-function selectMenu(menuId) {
-  if (activeMenuId.value === menuId) return;
-  activeMenuId.value = menuId;
-  const menu = props.menus.find((item) => item.id === menuId);
-  activeSubmenuId.value = menu?.children[0]?.id ?? null;
+/**
+ * 拼接 /main 路径
+ */
+function fullPath(path) {
+  return "/main/" + path;
 }
 
-function selectSubmenu(submenuId) {
-  activeSubmenuId.value = submenuId;
-}
-
-onMounted(() => {
-  if (props.menus.length > 0) {
-    selectMenu(props.menus[0].id);
+/**
+ * 切换顶部菜单（跳第一个页面）
+ */
+function goGroup(group) {
+  const first = childRoutes.find((r) => r.meta?.group === group);
+  if (first) {
+    router.push("/main/" + first.path);
   }
-});
+}
 </script>
 
 <style scoped>
@@ -94,6 +118,7 @@ onMounted(() => {
   background: #f5f7fa;
 }
 
+/* 顶部菜单 */
 .top-menu {
   flex-shrink: 0;
   background: #2c3e50;
@@ -102,12 +127,12 @@ onMounted(() => {
 
 .top-menu-nav {
   display: flex;
-  gap: 4px;
+  gap: 6px;
   padding: 0 24px;
 }
 
 .top-menu-item {
-  padding: 16px 24px;
+  padding: 16px 20px;
   border: none;
   background: transparent;
   color: rgba(255, 255, 255, 0.85);
@@ -128,6 +153,7 @@ onMounted(() => {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* 主体 */
 .body-area {
   flex: 1;
   display: flex;
@@ -136,42 +162,23 @@ onMounted(() => {
   overflow: hidden;
 }
 
-.content-area {
-  flex: 1;
-  min-height: 0;
-  min-width: 0;
-  padding: 24px;
-  overflow: auto;
-  background: #fff;
-  border-radius: 0 8px 8px 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-}
-
-.content-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: #909399;
-  font-size: 16px;
-}
-
+/* 左侧菜单 */
 .submenu-panel {
-  width: 220px;
+  width: 240px;
   flex-shrink: 0;
   background: #fff;
   border-radius: 8px 0 0 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  padding: 20px 0;
   overflow-y: auto;
 }
 
 .submenu-title {
-  margin: 0 0 12px;
-  padding: 0 20px;
+  margin: 0;
+  padding: 16px 20px;
   font-size: 14px;
   font-weight: 600;
   color: #606266;
+  border-bottom: 1px solid #eee;
 }
 
 .submenu-list {
@@ -181,7 +188,7 @@ onMounted(() => {
 }
 
 .submenu-item {
-  padding: 12px 20px;
+  padding: 12px 18px;
   font-size: 14px;
   color: #303133;
   cursor: pointer;
@@ -199,5 +206,17 @@ onMounted(() => {
   color: #42b983;
   border-left-color: #42b983;
   font-weight: 500;
+}
+
+/* 右侧内容 */
+.content-area {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  padding: 24px;
+  overflow: auto;
+  background: #fff;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 </style>
