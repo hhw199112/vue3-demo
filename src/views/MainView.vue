@@ -40,6 +40,11 @@
         <router-view />
       </main>
     </div>
+
+    <div style="text-align:center;margin-top: -15px">
+      <router-link to="/privacy" class="privacy-link">隐私政策
+      </router-link>
+      </div>
   </div>
 </template>
 

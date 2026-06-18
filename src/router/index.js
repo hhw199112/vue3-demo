@@ -44,6 +44,8 @@ import PiniaLevel5 from "@/views/Level5/PiniaLevel5.vue"
 import AxiosLevel5 from "@/views/Level5/AxiosLevel5.vue"
 import ViewRouter from "@/views/Level5/ViewRouter.vue"
 
+import Privacy from "@/PrivacyPage.vue"
+
 const routes = [
   {
     path: "/",
@@ -53,6 +55,10 @@ const routes = [
   {
     path: "/welcome",
     component: Welcome
+  },
+  {
+    path:"/privacy",
+    component:Privacy
   },
 
   /* ================= Layout ================= */
