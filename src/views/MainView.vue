@@ -43,6 +43,8 @@
 
     <div style="text-align:center;margin-top: -15px">
       <router-link to="/privacy" class="privacy-link">隐私政策
+      </router-link>&nbsp;&nbsp;
+      <router-link to="/about" class="privacy-link">关于我们
       </router-link>
       </div>
   </div>

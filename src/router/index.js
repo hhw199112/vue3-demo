@@ -45,6 +45,7 @@ import AxiosLevel5 from "@/views/Level5/AxiosLevel5.vue"
 import ViewRouter from "@/views/Level5/ViewRouter.vue"
 
 import Privacy from "@/PrivacyPage.vue"
+import AboutPage from "@/AboutPage.vue"
 
 const routes = [
   {
@@ -59,6 +60,10 @@ const routes = [
   {
     path:"/privacy",
     component:Privacy
+  },
+  {
+    path:"/about",
+    component:AboutPage
   },
 
   /* ================= Layout ================= */
