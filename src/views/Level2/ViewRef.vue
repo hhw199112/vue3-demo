@@ -68,7 +68,7 @@
 
 <script setup>
 import { ref, watch } from 'vue'
-import vueCode from '!!raw-loader!@/views/Level2/VueRef.vue?raw'
+import vueCode from '!!raw-loader!@/views/Level2/ViewRef.vue?raw'
 
 const text1 = ref('')
 const text2 = ref('')

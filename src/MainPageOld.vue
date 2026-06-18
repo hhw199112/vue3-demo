@@ -18,9 +18,9 @@ import ViewDefineEmits from "./views/Level3/ViewDefineEmits.vue";
 import ViewTemplateBase from "./views/Level1/ViewTemplateBase.vue";
 import ViewTemplateAdvance from "./views/Level1/ViewTemplateAdvance.vue";
 /*level2*/
-import VueRef from "./views/Level2/VueRef.vue";
-import VueReactive from "./views/Level2/VueReactive.vue";
-import VueLifecycle from "./views/Level2/VueLifecycle.vue";
+import VueRef from "./views/Level2/ViewRef.vue";
+import VueReactive from "./views/Level2/ViewReactive.vue";
+import VueLifecycle from "./views/Level2/ViewLifecycle.vue";
 import ViewNextTick from "./views/Level2/ViewNextTick.vue";
 /*level3 */
 import ViewProvide from "./views/Level3/ViewProvide.vue";

@@ -14,9 +14,9 @@ import ViewTemplateBase from "@/views/Level1/ViewTemplateBase.vue"
 import ViewTemplateAdvance from "@/views/Level1/ViewTemplateAdvance.vue"
 
 /* Level2 */
-import VueRef from "@/views/Level2/VueRef.vue"
-import VueReactive from "@/views/Level2/VueReactive.vue"
-import VueLifecycle from "@/views/Level2/VueLifecycle.vue"
+import ViewRef from "@/views/Level2/ViewRef.vue"
+import ViewReactive from "@/views/Level2/ViewReactive.vue"
+import ViewLifecycle from "@/views/Level2/ViewLifecycle.vue"
 import ViewNextTick from "@/views/Level2/ViewNextTick.vue"
 
 /* Level3 */
@@ -133,30 +133,43 @@ const routes = [
       /* ================= Level2 ================= */
       {
         path: "level2/ref",
-        component: VueRef,
+        component: ViewRef,
         meta: {
           group: "Level2",
           groupName: "Composition API",
-          subtitle: "Ref的使用"
+          subtitle: "Ref的使用",
+          title: "Vue3 ref 使用详解：响应式对象、watch 深度监听与属性监听对比 | vue3.tech",
+          description: "Vue3 ref 的完整教程，包含基本类型与对象的响应式处理方式、watch 深度监听与属性监听的区别、用户信息示例演示，以及完整源码展示。帮助你深入理解 ref 的工作机制与最佳实践。",
+          keywords: "Vue3 ref, Vue3 响应式, watch 深度监听, watch 属性监听, Vue3 教程, Vue3 组合式API"
         }
+        
       },
       {
         path: "level2/reactive",
-        component: VueReactive,
+        component: ViewReactive,
         meta: {
           group: "Level2",
           groupName: "Composition API",
-          subtitle: "Reactive的使用"
+          subtitle: "Reactive的使用",
+          title: "Vue3 reactive 深层响应式对象详解：嵌套结构、watch 监听对比与完整示例 | vue3.tech",
+          description: "Vue3 reactive 的完整教程，讲解如何创建深层响应式对象、处理嵌套结构、管理数组与对象属性，并对比 watch 深度监听与属性监听的差异。包含用户信息示例、修改演示与完整源码展示，帮助你深入理解 reactive 的工作机制。",
+          keywords: "Vue3 reactive, 深层响应式, Vue3 响应式对象, watch 深度监听, watch 属性监听, Vue3 教程, Vue3 组合式API"
         }
+        
       },
       {
         path: "level2/lifecycle",
-        component: VueLifecycle,
+        component: ViewLifecycle,
         meta: {
           group: "Level2",
           groupName: "Composition API",
-          subtitle: "Lifecycle的使用"
+          subtitle: "Lifecycle的使用",
+          title: "Vue3 生命周期详解：onMounted、onBeforeUnmount、onUnmounted 执行顺序与示例 | vue3.tech",
+          description: "Vue3 生命周期完整教程，讲解 onMounted、onBeforeUnmount、onUnmounted 的触发时机与执行顺序，并通过状态展示与日志记录进行可视化演示，帮助你快速理解组件从创建到销毁的全过程。",
+          keywords: "Vue3 生命周期, onMounted, onBeforeUnmount, onUnmounted, Vue3 组件销毁, Vue3 教程, Vue3 组合式API"
         }
+        
+
       },
       {
         path: "level2/nexttick",
@@ -164,8 +177,12 @@ const routes = [
         meta: {
           group: "Level2",
           groupName: "Composition API",
-          subtitle: "nextTick的使用"
+          subtitle: "nextTick的使用",
+          title: "Vue3 nextTick() 使用详解：DOM 更新机制、获取最新 DOM、滚动到底部示例 | vue3.tech",
+          description: "Vue3 nextTick() 的完整教程，讲解 Vue 的异步 DOM 更新机制，并通过示例对比未使用与使用 nextTick() 的差异，展示如何获取最新 DOM、自动滚动到底部、处理列表更新等常见场景，附带完整源码示例。",
+          keywords: "Vue3 nextTick, DOM 更新, Vue3 异步更新, 获取最新 DOM, Vue3 滚动到底部, Vue3 教程, Vue3 组合式API"
         }
+        
       },
 
       /* ================= Level3 ================= */

@@ -80,7 +80,7 @@
 
 <script setup>
 import { reactive, watch, ref } from 'vue'
-import vueCode from '!!raw-loader!@/views/Level2/VueReactive.vue?raw'
+import vueCode from '!!raw-loader!@/views/Level2/ViewReactive.vue?raw'
 
 const text1 = ref('')
 const text2 = ref('')

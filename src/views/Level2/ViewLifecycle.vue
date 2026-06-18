@@ -114,7 +114,7 @@ import {
   onUnmounted
 } from "vue"
 
-import vueCode from "!!raw-loader!@/views/Level2/VueLifecycle.vue"
+import vueCode from "!!raw-loader!@/views/Level2/ViewLifecycle.vue"
 
 const text = ref("等待加载")
 
