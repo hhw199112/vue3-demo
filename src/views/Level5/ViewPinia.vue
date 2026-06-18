@@ -32,7 +32,7 @@
             <span class="code-dot"></span>
             <span class="code-dot"></span>
             <span class="code-dot"></span>
-            <span class="code-filename">PiniaLevel5.vue</span>
+            <span class="code-filename">ViewPinia.vue</span>
           </div>
           <pre class="code-block"><code>{{ vueCode }}</code></pre>
         </div>

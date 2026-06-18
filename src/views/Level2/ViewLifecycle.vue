@@ -89,7 +89,7 @@
           <span class="code-dot"></span>
 
           <span class="code-filename">
-            LifeCycle.vue
+            ViewLifecycle.vue
           </span>
 
         </div>

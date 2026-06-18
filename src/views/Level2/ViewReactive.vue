@@ -69,7 +69,7 @@
             <span class="code-dot"></span>
             <span class="code-dot"></span>
             <span class="code-dot"></span>
-            <span class="code-filename">VueReactive.vue</span>
+            <span class="code-filename">ViewReactive.vue</span>
           </div>
           <pre class="code-block"><code>{{ vueCode }}</code></pre>
         </div>

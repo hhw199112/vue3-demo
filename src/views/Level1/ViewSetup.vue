@@ -55,7 +55,7 @@
             <span class="code-dot"></span>
             <span class="code-dot"></span>
             <span class="code-dot"></span>
-            <span class="code-filename">VueSetup.vue</span>
+            <span class="code-filename">ViewSetup.vue</span>
           </div>
           <pre class="code-block"><code>{{ vueCode }}</code></pre>
         </div>
