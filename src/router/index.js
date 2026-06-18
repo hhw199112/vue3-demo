@@ -37,11 +37,11 @@ import CounterView from "@/views/CounterView.vue"
 import ProductView from "@/views/ProductView.vue"*/
 
 /* Level4 */
-import UseCounterComponent from "@/views/Level4/ViewComposables.vue"
+import ViewComposables from "@/views/Level4/ViewComposables.vue"
 
 /* Level5 */
-import PiniaLevel5 from "@/views/Level5/PiniaLevel5.vue"
-import AxiosLevel5 from "@/views/Level5/AxiosLevel5.vue"
+import ViewPinia from "@/views/Level5/ViewPinia.vue"
+import ViewAxios from "@/views/Level5/ViewAxios.vue"
 import ViewRouter from "@/views/Level5/ViewRouter.vue"
 
 import Privacy from "@/PrivacyPage.vue"
@@ -341,32 +341,44 @@ const routes = [
       /* ================= Level4 ================= */
       {
         path: "level4/composable",
-        component: UseCounterComponent,
+        component: ViewComposables,
         meta: {
           group: "Level4",
           groupName: "Vue3企业开发核心",
-          subtitle: "组合式函数"
+          subtitle: "组合式函数",
+          title: "Vue3 组合式函数 Composables 使用详解：逻辑抽离与复用完整示例 | vue3.tech",
+          description: "Vue3 组合式函数（Composables）完整教程，讲解如何将业务逻辑抽离到独立函数中，实现多个组件共享同一逻辑。包含 useCounter、useUser 的封装示例、状态展示、逻辑复用说明以及完整源码展示，是 Composition API 的核心实践方式。",
+          keywords: "Vue3 Composables, 组合式函数, useCounter, useUser, Vue3 逻辑复用, Composition API, Vue3 教程"
         }
+        
       },
 
       /* ================= Level5 ================= */
       {
         path: "level5/pinia",
-        component: PiniaLevel5,
+        component: ViewPinia,
         meta: {
           group: "Level5",
           groupName: "企业项目开发",
-          subtitle: "Pinia状态管理"
+          subtitle: "Pinia状态管理",
+          title: "Pinia 状态管理使用详解：state、getters、actions 示例演示 | vue3.tech",
+          description: "Pinia 状态管理的完整教程，展示如何使用 state、getters 与 actions 管理全局共享状态。通过 useUserStore 示例演示状态读取、修改与 getter 计算属性，并附带完整的 store 与页面源码，帮助你快速掌握 Pinia 的核心用法。",
+          keywords: "Pinia, Vue3 状态管理, Pinia state, Pinia getters, Pinia actions, useUserStore, Vue3 全局状态"
         }
+        
       },
       {
         path: "level5/axios",
-        component: AxiosLevel5,
+        component: ViewAxios,
         meta: {
           group: "Level5",
           groupName: "企业项目开发",
-          subtitle: "Axios二次封装"
+          subtitle: "Axios二次封装",
+          title: "Axios 数据请求使用详解：封装 request 实例与异步接口调用示例 | vue3.tech",
+          description: "Axios 数据请求的完整教程，展示如何封装 request 实例并在组件中通过 getData 异步获取接口数据。包含加载状态处理、表格数据展示、接口封装结构以及完整源码文件，适用于 Vue3 项目中的网络请求实践。",
+          keywords: "Axios, Vue3 Axios, request 封装, 异步请求, getData 示例, Vue3 接口调用, 前端数据请求"
         }
+        
       },
       {
         path: "level5/router",
@@ -374,8 +386,12 @@ const routes = [
         meta: {
           group: "Level5",
           groupName: "企业项目开发",
-          subtitle: "路由管理"
+          subtitle: "路由管理",
+          title: "Vue Router 路由管理使用详解：路由配置、页面跳转与完整示例 | vue3.tech",
+          description: "Vue Router 的完整教程，讲解如何在 Vue3 中配置路由、注册 Router、使用 router-view 渲染页面，并通过 push 或 router-link 实现页面跳转。包含 RootPage、LoginPage、App、index.js、main.js 等完整源码示例，帮助你快速掌握 SPA 路由管理。",
+          keywords: "Vue Router, Vue3 路由, SPA 路由管理, router-view, router-link, push 跳转, Vue3 教程"
         }
+        
       }
     ]
   }

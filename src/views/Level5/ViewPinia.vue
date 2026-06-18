@@ -52,7 +52,7 @@
 
 <script setup>
 import { useUserStore } from '@/store/user'
-import vueCode from '!!raw-loader!@/views/Level5/PiniaLevel5.vue?raw'
+import vueCode from '!!raw-loader!@/views/Level5/ViewPinia.vue?raw'
 import jsCode from '!!raw-loader!@/store/user'
 
 const userStore = useUserStore()

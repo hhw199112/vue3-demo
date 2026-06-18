@@ -78,7 +78,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { getData } from '@/utils/api'
-import vueCode from '!!raw-loader!@/views/Level5/AxiosLevel5.vue?raw'
+import vueCode from '!!raw-loader!@/views/Level5/ViewAxios.vue?raw'
 import requestCode from '!!raw-loader!@/utils/request'
 import apiCode from '!!raw-loader!@/utils/api'
 

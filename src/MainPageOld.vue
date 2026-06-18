@@ -7,8 +7,8 @@ import MainLayout from "./views/MainViewOld.vue";
 import UseCounterComponent from "./views/Level4/ViewComposables.vue";
 import CounterView from "./views/CounterView.vue";
 import ProductView from "./views/ProductView.vue";
-import PiniaLevel5 from "./views/Level5/PiniaLevel5.vue";
-import AxiosLevel5 from "./views/Level5/AxiosLevel5.vue";
+import PiniaLevel5 from "./views/Level5/ViewPinia.vue";
+import AxiosLevel5 from "./views/Level5/ViewAxios.vue";
 /*level1*/
 import VueBasic from "./views/Level1/ViewBasic.vue";
 import VueSetup from "./views/Level1/ViewSetup.vue";
