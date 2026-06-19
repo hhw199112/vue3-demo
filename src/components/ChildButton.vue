@@ -84,13 +84,52 @@
         </div>
   
       </section>
+
+          <!-- 源码展示 -->
+
+    <section class="code-section">
+      <h3 class="section-title">源码文件</h3>
+
+      <div class="code-panels">
+        <div class="code-panel">
+        <div class="code-panel-header">
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+
+          <span class="code-filename"> ViewDefineOptions.vue </span>
+        </div>
+
+        <pre class="code-block">
+  <code>{{ vueCode }}</code>
+          </pre>
+      </div>
+
+      <div class="code-panel">
+        <div class="code-panel-header">
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+
+          <span class="code-filename"> ChildButton.vue </span>
+        </div>
+
+        <pre class="code-block">
+  <code>{{ vueCode2 }}</code>
+          </pre>
+      </div>
+      </div>
+
+   
+    </section>
   
     </div>
   </template>
   
   <script setup>
   import { defineOptions } from "vue"
-  
+  import vueCode from "!!raw-loader!@/views/Level3/ViewDefineOptions.vue?raw";
+import vueCode2 from "!!raw-loader!@/components/ChildButton.vue?raw";
   defineOptions({
     name: "BaseBtn",
     inheritAttrs: false
@@ -210,4 +249,99 @@
     color: #606266;
     line-height: 1.6;
   }
+
+  /* 源码 */
+
+.code-section {
+  margin-top: 10px;
+}
+
+.code-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+.code-panel {
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  border: 1px solid #2d2d2d;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.code-panel-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 10px 14px;
+
+  background: #2d2d2d;
+}
+
+.code-dot {
+  width: 10px;
+
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #555;
+}
+
+.code-dot:nth-child(1) {
+  background: #ff5f57;
+}
+
+.code-dot:nth-child(2) {
+  background: #febc2e;
+}
+
+.code-dot:nth-child(3) {
+  background: #28c840;
+}
+
+.code-filename {
+  margin-left: 8px;
+
+  font-size: 12px;
+
+  color: #aaa;
+
+  font-family: Consolas, Monaco, monospace;
+}
+
+.code-block {
+  margin: 0;
+
+  padding: 16px;
+
+  max-height: 500px;
+
+  overflow: auto;
+
+  background: #1e1e1e;
+
+  color: #d4d4d4;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  font-family: Consolas, Monaco, "Courier New", monospace;
+
+  white-space: pre-wrap;
+
+  word-break: break-all;
+}
+
+.code-block code {
+  font-family: inherit;
+}
   </style>
