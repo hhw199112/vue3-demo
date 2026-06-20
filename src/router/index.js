@@ -52,7 +52,8 @@ import ContactPage from "@/ContactPage.vue"
 const routes = [
   {
     path: "/",
-    redirect: "/welcome"
+    component:Welcome
+    //redirect: "/welcome"
   },
 
   {
