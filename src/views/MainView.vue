@@ -123,7 +123,8 @@ function goGroup(group) {
 /* 顶部菜单 */
 .top-menu {
   flex-shrink: 0;
-  background: #2c3e50;
+  /*background: #2c3e50;*/
+  background: linear-gradient(-45deg,  #6bffe9, #8e44ad, #409eff);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
