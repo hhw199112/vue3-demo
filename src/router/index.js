@@ -12,6 +12,7 @@ import ViewBasic from "@/views/Level1/ViewBasic.vue"
 import VieSetup from "@/views/Level1/ViewSetup.vue"
 import ViewTemplateBase from "@/views/Level1/ViewTemplateBase.vue"
 import ViewTemplateAdvance from "@/views/Level1/ViewTemplateAdvance.vue"
+import ViewEvent from "@/views/Level1/ViewEvent.vue"
 
 /* Level2 */
 import ViewRef from "@/views/Level2/ViewRef.vue"
@@ -137,6 +138,21 @@ const routes = [
           keywords: "Vue3 模板语法, Vue3 指令, v-show, v-if, v-for, v-once, v-memo, Vue3 性能优化, Vue3 教程"
         }
       },
+      {
+        path: "level1/event",
+        component: ViewEvent,
+        meta: {
+          group: "Level1",
+          groupName: "Vue3 基础语法",
+          subtitle: "事件对象",
+          title: "Vue3 模板高级语法详解：v-show、v-if、v-for、v-once、v-memo 全面示例 | vue3.tech",
+          description: "深入讲解 Vue3 模板高级语法，包括 v-show、v-if、v-for、v-once、v-cloak、v-memo 的使用方式、性能差异、适用场景与完整 Demo 示例。通过实际代码演示帮助你快速掌握 Vue3 模板指令的高级用法。",
+          keywords: "Vue3 模板语法, Vue3 指令, v-show, v-if, v-for, v-once, v-memo, Vue3 性能优化, Vue3 教程"
+        }
+      },
+
+
+      
 
       /* ================= Level2 ================= */
       {
