@@ -13,7 +13,7 @@ import VieSetup from "@/views/Level1/ViewSetup.vue"
 import ViewTemplateBase from "@/views/Level1/ViewTemplateBase.vue"
 import ViewTemplateAdvance from "@/views/Level1/ViewTemplateAdvance.vue"
 import ViewEvent from "@/views/Level1/ViewEvent.vue"
-
+import ViewDataBinding from "@/views/Level1/ViewDataBinding.vue"
 /* Level2 */
 import ViewRef from "@/views/Level2/ViewRef.vue"
 import ViewReactive from "@/views/Level2/ViewReactive.vue"
@@ -48,6 +48,7 @@ import ViewRouter from "@/views/Level5/ViewRouter.vue"
 import Privacy from "@/PrivacyPage.vue"
 import AboutPage from "@/AboutPage.vue"
 import ContactPage from "@/ContactPage.vue"
+
 
 
 const routes = [
@@ -145,11 +146,27 @@ const routes = [
           group: "Level1",
           groupName: "Vue3 基础语法",
           subtitle: "事件对象",
-          title: "Vue3 模板高级语法详解：v-show、v-if、v-for、v-once、v-memo 全面示例 | vue3.tech",
-          description: "深入讲解 Vue3 模板高级语法，包括 v-show、v-if、v-for、v-once、v-cloak、v-memo 的使用方式、性能差异、适用场景与完整 Demo 示例。通过实际代码演示帮助你快速掌握 Vue3 模板指令的高级用法。",
-          keywords: "Vue3 模板语法, Vue3 指令, v-show, v-if, v-for, v-once, v-memo, Vue3 性能优化, Vue3 教程"
+          title: "Vue3 事件处理详解：click、input、keyup、事件修饰符与完整示例 | vue3.tech",
+          description: "Vue3 事件处理的完整教程，涵盖 click、dblclick、input、focus、blur、keyup.enter 等常见事件类型，并展示事件传参、获取 event 对象、事件修饰符（stop、prevent、once）以及表单与键盘事件的实际应用场景。附带完整示例与源码展示，帮助你全面掌握 Vue3 事件机制。",
+          keywords: "Vue3 事件处理, v-on, Vue3 click, Vue3 input, Vue3 keyup, Vue3 事件修饰符, Vue3 教程"
         }
+        
       },
+      {
+        path: "level1/dataBind",
+        component: ViewDataBinding,
+        meta: {
+          group: "Level1",
+          groupName: "Vue3 基础语法",
+          subtitle: "数据绑定",
+          title: "Vue3 数据绑定详解：插值表达式、v-bind、v-model 与表单控件绑定 | vue3.tech",
+          description: "Vue3 数据绑定的完整教程，涵盖插值表达式、v-bind 属性绑定、v-model 双向绑定（trim、number、lazy 修饰符）以及 textarea、radio、checkbox、select 等表单控件绑定。通过示例展示数据与视图同步更新机制，帮助你全面掌握 Vue3 的核心数据绑定能力。",
+          keywords: "Vue3 数据绑定, v-bind, v-model, Vue3 表单绑定, Vue3 Mustache, Vue3 教程"
+        }
+        
+        
+      },
+
 
 
       
