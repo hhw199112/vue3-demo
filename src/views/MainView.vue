@@ -16,15 +16,12 @@
     </header>
 
     <div class="body-area">
-      <!-- 左侧菜单（可折叠） -->
-      <aside class="submenu-panel" :class="{ collapsed: isCollapsed }">
-
-        <!-- 标题（折叠时隐藏） -->
-        <h3 class="submenu-title" v-if="!isCollapsed">
+      <!-- 左侧菜单 -->
+      <aside class="submenu-panel">
+        <h3 class="submenu-title">
           {{ currentGroup }}
         </h3>
 
-        <!-- 菜单列表 -->
         <ul class="submenu-list">
           <li
             v-for="item in leftMenus"
@@ -33,17 +30,9 @@
             :class="{ active: route.path === fullPath(item.path) }"
             @click="router.push(fullPath(item.path))"
           >
-            <span v-if="!isCollapsed">{{ item.meta.subtitle }}</span>
-            <span v-else>{{ item.meta.subtitle.slice(0, 1) }}</span>
+            {{ item.meta.subtitle }}
           </li>
         </ul>
-
-        <!-- 底部折叠按钮（图标化） -->
-        <div class="collapse-btn" @click="toggleCollapse">
-          <span class="icon">
-            {{ isCollapsed ? '▶' : '◀' }}
-          </span>
-        </div>
       </aside>
 
       <!-- 内容区域 -->
@@ -57,51 +46,63 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import FooterLinks from "./FooterLinks.vue";
-
 const router = useRouter();
 const route = useRoute();
 
-/* 左侧折叠状态 */
-const isCollapsed = ref(false);
-function toggleCollapse() {
-  isCollapsed.value = !isCollapsed.value;
-}
-
-/* 所有 /main 子路由 */
+/**
+ * 当前所有 /main 子路由
+ */
 const childRoutes =
   router.options.routes.find((r) => r.path === "/main")?.children || [];
 
-/* 当前分组 */
+/**
+ * 当前分组
+ */
 const currentGroup = computed(() => route.meta?.group);
 
-/* 顶部菜单 */
+/**
+ * 当前分组名称
+ */
+//const currentGroupName = computed(() => route.meta?.groupName)
+
+/**
+ * 顶部菜单（去重 group）
+ */
 const topMenus = computed(() => {
   const map = {};
+
   childRoutes.forEach((r) => {
     if (r.meta?.group) {
       map[r.meta.group] = r.meta.groupName;
     }
   });
+
   return Object.keys(map).map((key) => ({
     id: key,
     name: map[key],
   }));
 });
 
-/* 左侧菜单 */
+/**
+ * 左侧菜单（当前 group）
+ */
 const leftMenus = computed(() => {
   return childRoutes.filter((r) => r.meta?.group === currentGroup.value);
 });
 
-/* 拼接路径 */
+/**
+ * 拼接 /main 路径
+ */
 function fullPath(path) {
   return "/main/" + path;
 }
 
-/* 切换顶部菜单 */
+/**
+ * 切换顶部菜单（跳第一个页面）
+ */
 function goGroup(group) {
   const first = childRoutes.find((r) => r.meta?.group === group);
   if (first) {
@@ -122,7 +123,8 @@ function goGroup(group) {
 /* 顶部菜单 */
 .top-menu {
   flex-shrink: 0;
-  background: linear-gradient(-45deg, #6bffe9, #8e44ad, #409eff);
+  /*background: #2c3e50;*/
+  background: linear-gradient(-45deg,  #6bffe9, #8e44ad, #409eff);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -154,7 +156,7 @@ function goGroup(group) {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* 主体区域 */
+/* 主体 */
 .body-area {
   flex: 1;
   display: flex;
@@ -171,17 +173,8 @@ function goGroup(group) {
   border-radius: 8px 0 0 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  transition: width 0.25s ease;
 }
 
-/* 折叠状态 */
-.submenu-panel.collapsed {
-  width: 70px;
-}
-
-/* 标题 */
 .submenu-title {
   margin: 0;
   padding: 16px 20px;
@@ -191,12 +184,10 @@ function goGroup(group) {
   border-bottom: 1px solid #eee;
 }
 
-/* 菜单列表 */
 .submenu-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  flex: 1;
 }
 
 .submenu-item {
@@ -220,40 +211,7 @@ function goGroup(group) {
   font-weight: 500;
 }
 
-/* 折叠时菜单项居中 */
-.submenu-panel.collapsed .submenu-item {
-  text-align: center;
-  padding: 12px 0;
-}
-
-/* 折叠时隐藏左侧高亮条 */
-.submenu-panel.collapsed .submenu-item.active {
-  border-left-color: transparent;
-}
-
-/* 底部折叠按钮（图标化） */
-.collapse-btn {
-  padding: 14px 0;
-  text-align: center;
-  cursor: pointer;
-  background: #f0f0f0;
-  border-top: 1px solid #ddd;
-  user-select: none;
-  transition: background 0.2s;
-}
-
-.collapse-btn:hover {
-  background: #e6e6e6;
-}
-
-.collapse-btn .icon {
-  font-size: 18px;
-  color: #606266;
-  display: inline-block;
-  transition: transform 0.25s ease;
-}
-
-/* 内容区域 */
+/* 右侧内容 */
 .content-area {
   flex: 1;
   min-width: 0;
