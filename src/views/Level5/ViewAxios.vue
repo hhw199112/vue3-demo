@@ -1,5 +1,5 @@
 <template>
-  <div class="axios-demo">
+  <div class="vue-axios">
     <header class="axios-header">
       <h2>Axios 数据请求</h2>
       <p class="axios-desc">通过封装的 request 实例调用接口，在组件中异步获取并展示数据。</p>
@@ -98,7 +98,7 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.axios-demo {
+.vue-axios {
   width: 100%;
 }
 

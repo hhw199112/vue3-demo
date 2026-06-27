@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-nexttick">
+  <div class="vue-next-tick">
     <!-- 页面标题 -->
     <header class="page-header">
       <h2>Vue3 nextTick()</h2>
@@ -202,7 +202,7 @@ async function addWithNextTick() {
 </script>
 
 <style scoped>
-.vue-nexttick {
+.vue-next-tick {
   width: 100%;
 }
 

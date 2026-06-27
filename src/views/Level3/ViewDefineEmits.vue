@@ -1,5 +1,5 @@
 <template>
-  <div class="emit-page">
+  <div class="vue-emit-page">
     <!-- 页面标题 -->
 
     <header class="page-header">
@@ -143,7 +143,7 @@ function onDeleteByPropsId(id) {
 </script>
 
 <style scoped>
-.emit-page {
+.vue-emit-page {
   width: 100%;
 }
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="vue-listRendering">
+    <div class="vue-list-rendering">
   
       <!-- ================= Header ================= -->
       <header class="page-header">
@@ -211,7 +211,7 @@ function removeUser() {
 </script>
 
 <style scoped>
-.vue-listRendering {
+.vue-list-rendering {
   width: 100%;
 }
 

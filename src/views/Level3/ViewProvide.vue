@@ -1,5 +1,5 @@
 <template>
-  <div class="provide-page">
+  <div class="vue-provide">
     <!-- 页面标题 -->
 
     <header class="page-header">
@@ -125,7 +125,7 @@ function changeData(){
 </script>
 
 <style scoped>
-.provide-page {
+.vue-provide-page {
   width: 100%;
 }
 

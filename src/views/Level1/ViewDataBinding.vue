@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-binding">
+  <div class="vue-data-binding">
     <!-- 页面标题 -->
     <header class="page-header">
       <h2>Vue3 数据绑定</h2>
@@ -301,7 +301,7 @@ const citySelect = ref("nj");
 </script>
 
 <style scoped>
-.vue-binding {
+.vue-data-binding {
   width: 100%;
   padding: 10px 0;
   overflow-x: hidden;

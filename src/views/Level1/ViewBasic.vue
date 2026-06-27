@@ -1,5 +1,5 @@
 <template>
-  <div class="view-page vue-basic">
+  <div class="vue-basic">
     <header class="page-header">
       <h2>Vue3 项目创建</h2>
       <p class="page-desc">使用 Vue CLI 创建 Vue3 项目，并在 Cursor 中打开进行开发。</p>

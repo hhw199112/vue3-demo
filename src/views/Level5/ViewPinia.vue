@@ -1,5 +1,5 @@
 <template>
-  <div class="pinia-demo">
+  <div class="vue-pinia">
     <header class="pinia-header">
       <h2>Pinia 状态演示</h2>
       <p class="pinia-desc">通过 Store 管理共享状态，支持 state、getters 与 actions。</p>
@@ -65,7 +65,7 @@ function changeState() {
 </script>
 
 <style scoped>
-.pinia-demo {
+.vue-pinia {
   width: 100%;
 }
 

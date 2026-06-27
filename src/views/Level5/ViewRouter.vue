@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-router-page">
+  <div class="vue-router">
     <!-- 页面标题 -->
 
     <header class="page-header">
@@ -137,7 +137,7 @@ import mainJSCode from "!!raw-loader!@/main.js?raw";
 </script>
   
   <style scoped>
-.vue-router-page {
+.vue-router {
   width: 100%;
 }
 

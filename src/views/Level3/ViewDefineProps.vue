@@ -1,5 +1,5 @@
 <template>
-  <div class="props-page">
+  <div class="vue-props-page">
     <!-- 页面标题 -->
 
     <header class="page-header">
@@ -110,7 +110,7 @@ function changeName() {
 </script>
 
 <style scoped>
-.props-page {
+.vue-props-page {
   width: 100%;
 }
 

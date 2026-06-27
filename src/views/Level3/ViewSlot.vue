@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-slot-page">
+  <div class="vue-slot">
     <!-- 标题 -->
 
     <header class="page-header">
@@ -140,7 +140,7 @@ import scopedSlot from "!!raw-loader!@/components/ScopedSlot.vue";
   <style scoped>
 /* 页面整体 */
 
-.vue-slot-page {
+.vue-slot {
   width: 100%;
 }
 

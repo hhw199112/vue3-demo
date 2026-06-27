@@ -1,5 +1,5 @@
 <template>
-  <div class="life-cycle">
+  <div class="vue-life-cycle">
 
     <header class="page-header">
       <h2>Vue3 生命周期</h2>
@@ -144,7 +144,7 @@ onUnmounted(() => {
 
 <style scoped>
 
-.life-cycle{
+.vue-life-cycle{
     width:100%;
 }
 

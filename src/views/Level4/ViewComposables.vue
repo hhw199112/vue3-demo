@@ -1,5 +1,5 @@
 <template>
-  <div class="composable-page">
+  <div class="vue-composable">
     <!-- 页面标题 -->
 
     <header class="page-header">
@@ -161,7 +161,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.composable-page {
+.vue-composable {
   width: 100%;
 }
 
