@@ -100,8 +100,7 @@
           <span class="code-filename"> ViewDefineOptions.vue </span>
         </div>
 
-        <pre class="code-block">
-  <code>{{ vueCode }}</code>
+        <pre class="code-block"><code>{{ vueCode }}</code>
           </pre>
       </div>
 
@@ -114,8 +113,7 @@
           <span class="code-filename"> ChildButton.vue </span>
         </div>
 
-        <pre class="code-block">
-  <code>{{ vueCode2 }}</code>
+        <pre class="code-block"><code>{{ vueCode2 }}</code>
           </pre>
       </div>
       </div>

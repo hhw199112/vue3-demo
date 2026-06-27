@@ -333,7 +333,9 @@ async function addWithNextTick() {
 
 .code-filename {
   margin-left: 8px;
+  font-size: 12px;
   color: #aaa;
+  font-family: Consolas, Monaco, monospace;
 }
 
 .code-block {

@@ -78,39 +78,33 @@
     <section class="code-section">
       <h3 class="section-title">源码文件</h3>
 
-    <div class="code-panels">
+      <div class="code-panels">
         <div class="code-panel">
-        <div class="code-panel-header">
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
+          <div class="code-panel-header">
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
 
-          <span class="code-filename"> ViewVModel.vue </span>
+            <span class="code-filename"> ViewVModel.vue </span>
+          </div>
+
+          <pre class="code-block"><code>{{ vueCode }}</code>
+          </pre>
         </div>
 
-        <pre class="code-block">
-  <code>{{ vueCode }}</code>
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+
+            <span class="code-filename"> UserInput.vue </span>
+          </div>
+
+          <pre class="code-block"><code>{{ vueCode2 }}</code>
           </pre>
-      </div>
-
-      <div class="code-panel">
-        <div class="code-panel-header">
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
-
-          <span class="code-filename"> UserInput.vue </span>
         </div>
-
-        <pre class="code-block">
-  <code>{{ vueCode2 }}</code>
-          </pre>
       </div>
-    </div>
-
-
-  
-
     </section>
   </div>
 </template>

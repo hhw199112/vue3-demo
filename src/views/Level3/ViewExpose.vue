@@ -66,35 +66,31 @@
 
       <div class="code-panels">
         <div class="code-panel">
-        <div class="code-panel-header">
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
+          <div class="code-panel-header">
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
 
-          <span class="code-filename"> ViewExpose.vue </span>
+            <span class="code-filename"> ViewExpose.vue </span>
+          </div>
+
+          <pre class="code-block"><code>{{ vueCode }}</code>
+          </pre>
         </div>
 
-        <pre class="code-block">
-  <code>{{ vueCode }}</code>
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+
+            <span class="code-filename"> ChildComponent.vue </span>
+          </div>
+
+          <pre class="code-block"><code>{{ vueCode2 }}</code>
           </pre>
-      </div>
-
-      <div class="code-panel">
-        <div class="code-panel-header">
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
-
-          <span class="code-filename"> ChildComponent.vue </span>
         </div>
-
-        <pre class="code-block">
-  <code>{{ vueCode2 }}</code>
-          </pre>
       </div>
-      </div>
-
-   
     </section>
   </div>
 </template>
@@ -106,7 +102,6 @@ import ChildExpose from "@/components/ChildExpose.vue";
 
 import vueCode from "!!raw-loader!@/views/Level3/ViewExpose.vue?raw";
 import vueCode2 from "!!raw-loader!@/components/ChildComponent.vue?raw";
-
 
 const childRef = ref();
 
