@@ -14,6 +14,8 @@ import ViewTemplateBase from "@/views/Level1/ViewTemplateBase.vue"
 import ViewTemplateAdvance from "@/views/Level1/ViewTemplateAdvance.vue"
 import ViewEvent from "@/views/Level1/ViewEvent.vue"
 import ViewDataBinding from "@/views/Level1/ViewDataBinding.vue"
+import ViewClassStyleBinding from "@/views/Level1/ViewClassStyleBinding.vue"
+import ViewListRendering from "@/views/Level1/ViewListRendering.vue"
 /* Level2 */
 import ViewRef from "@/views/Level2/ViewRef.vue"
 import ViewReactive from "@/views/Level2/ViewReactive.vue"
@@ -153,7 +155,7 @@ const routes = [
         
       },
       {
-        path: "level1/dataBind",
+        path: "level1/dataBinding",
         component: ViewDataBinding,
         meta: {
           group: "Level1",
@@ -167,7 +169,39 @@ const routes = [
         
       },
 
+      {
+        path: "level1/classStyleBinding",
+        component: ViewClassStyleBinding,
+        meta: {
+          group: "Level1",
+          groupName: "Vue3 基础语法",
+          subtitle: "样式绑定",
+          title: "Vue3 样式绑定详解：Class 与 Style 动态绑定、企业案例与综合示例 | vue3.tech",
+          description: "Vue3 样式绑定的完整教程，涵盖 :class 与 :style 的字符串、对象、数组写法，以及动态样式、菜单高亮、动态进度条等企业级案例。通过示例展示如何在实际项目中灵活控制组件样式，是前端开发中最常用的 Vue3 技能之一。",
+          keywords: "Vue3 样式绑定, Vue3 class, Vue3 style, Vue3 动态样式, Vue3 企业案例, Vue3 教程"
+        }
+        
+        
+        
+      },
+      {
+        path: "level1/listRendering",
+        component: ViewListRendering,
+        meta: {
+          group: "Level1",
+          groupName: "Vue3 基础语法",
+          subtitle: "列表渲染",
+          title: "Vue3 样式绑定详解：Class 与 Style 动态绑定、企业案例与综合示例 | vue3.tech",
+          description: "Vue3 样式绑定的完整教程，涵盖 :class 与 :style 的字符串、对象、数组写法，以及动态样式、菜单高亮、动态进度条等企业级案例。通过示例展示如何在实际项目中灵活控制组件样式，是前端开发中最常用的 Vue3 技能之一。",
+          keywords: "Vue3 样式绑定, Vue3 class, Vue3 style, Vue3 动态样式, Vue3 企业案例, Vue3 教程"
+        }
+        
+        
+        
+      },
 
+
+      
 
       
 
