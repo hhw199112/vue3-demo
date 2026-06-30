@@ -84,7 +84,7 @@
             <span class="code-dot"></span>
             <span class="code-dot"></span>
 
-            <span class="code-filename"> ChildComponent.vue </span>
+            <span class="code-filename"> ChildExpose.vue </span>
           </div>
 
           <pre class="code-block"><code>{{ vueCode2 }}</code>
@@ -101,7 +101,7 @@ import { ref } from "vue";
 import ChildExpose from "@/components/ChildExpose.vue";
 
 import vueCode from "!!raw-loader!@/views/Level3/ViewExpose.vue?raw";
-import vueCode2 from "!!raw-loader!@/components/ChildComponent.vue?raw";
+import vueCode2 from "!!raw-loader!@/components/ChildExpose.vue?raw";
 
 const childRef = ref();
 
@@ -112,7 +112,8 @@ function ParentClick() {
 }
 
 function ParentShowVal() {
-  tip.value = "显示子组件变量值：" + childRef.value.val;
+  //可以看出没有暴露的属性，无法调用
+  tip.value = "显示子组件变量值：" + childRef.value.val+"；"+childRef.value.year;
 }
 </script>
   

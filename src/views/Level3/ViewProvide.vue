@@ -79,18 +79,34 @@
     <section class="code-section">
       <h3 class="section-title">源码文件</h3>
 
-      <div class="code-panel">
-        <div class="code-panel-header">
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
+      <div class="code-panels">
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
 
-          <span class="code-filename"> ViewProvide.vue </span>
-        </div>
+            <span class="code-filename"> ViewProvide.vue </span>
+          </div>
 
-        <pre class="code-block">
+          <pre class="code-block">
 <code>{{ vueCode }}</code>
         </pre>
+        </div>
+
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+
+            <span class="code-filename"> InjectComponent.vue </span>
+          </div>
+
+          <pre class="code-block">
+<code>{{ vueCode2 }}</code>
+        </pre>
+        </div>
       </div>
     </section>
   </div>
@@ -102,6 +118,8 @@ import { provide, ref } from "vue";
 import InjectComponent from "@/components/InjectComponent.vue";
 
 import vueCode from "!!raw-loader!@/views/Level3/ViewProvide.vue";
+
+import vueCode2 from "!!raw-loader!@/components/InjectComponent.vue";
 
 const user = ref({
   name: "沙加",
@@ -117,11 +135,9 @@ provide(
   user
 );
 
-
-function changeData(){
-    user.value.age=Math.floor(Math.random()*30);
+function changeData() {
+  user.value.age = Math.floor(Math.random() * 30);
 }
-
 </script>
 
 <style scoped>
@@ -223,6 +239,13 @@ function changeData(){
   background: #fff;
   border: 1px solid #ebeef5;
   border-radius: 8px;
+}
+
+.code-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
 }
 
 .code-panel {
