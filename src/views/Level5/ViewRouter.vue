@@ -84,11 +84,25 @@
             <span class="code-dot"></span>
             <span class="code-dot"></span>
 
-            <span class="code-filename"> App.vue </span>
+            <span class="code-filename"> MainPage.vue </span>
           </div>
 
           <pre class="code-block">
-<code>{{ appCode }}</code>
+<code>{{ mainPageCode }}</code>
+          </pre>
+        </div>
+
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+
+            <span class="code-filename"> MainView.vue </span>
+          </div>
+
+          <pre class="code-block">
+<code>{{ mainViewCode }}</code>
           </pre>
         </div>
 
@@ -129,7 +143,9 @@ import rootPageCode from "!!raw-loader!@/RootPage.vue?raw";
 
 import loginPageCode from "!!raw-loader!@/LoginPage.vue?raw";
 
-import appCode from "!!raw-loader!@/MainPage.vue?raw";
+import mainPageCode from "!!raw-loader!@/MainPage.vue?raw";
+
+import mainViewCode from "!!raw-loader!@/views/MainView.vue?raw";
 
 import indexJSCode from "!!raw-loader!@/router/index.js?raw";
 

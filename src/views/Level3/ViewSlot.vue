@@ -31,9 +31,9 @@
 
       <div class="demo-box">
         <NamedSlot>
-          <template #header> this is header </template>
-
           <template #default> this is default content </template>
+
+          <template #header> this is header </template>
 
           <template #footer> this is footer </template>
         </NamedSlot>

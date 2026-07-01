@@ -191,10 +191,11 @@ const routes = [
           group: "Level1",
           groupName: "Vue3 基础语法",
           subtitle: "列表渲染",
-          title: "Vue3 样式绑定详解：Class 与 Style 动态绑定、企业案例与综合示例 | vue3.tech",
-          description: "Vue3 样式绑定的完整教程，涵盖 :class 与 :style 的字符串、对象、数组写法，以及动态样式、菜单高亮、动态进度条等企业级案例。通过示例展示如何在实际项目中灵活控制组件样式，是前端开发中最常用的 Vue3 技能之一。",
-          keywords: "Vue3 样式绑定, Vue3 class, Vue3 style, Vue3 动态样式, Vue3 企业案例, Vue3 教程"
+          title: "Vue3 列表渲染完整指南：v-for 数组、对象、索引、Select、增删操作全场景示例 | vue3.tech",
+          description: "Vue3 列表渲染（v-for）全场景教程，涵盖数组循环、索引、对象数组、对象遍历、数字循环、菜单渲染、Select 下拉框循环以及新增/删除操作。提供企业级示例与完整源码展示，帮助你全面掌握 Vue3 中最常用的渲染指令。",
+          keywords: "Vue3 列表渲染, Vue3 v-for, Vue3 数组循环, Vue3 对象循环, Vue3 Select 渲染, Vue3 增删操作, Vue3 教程"
         }
+        
         
         
         
