@@ -16,6 +16,14 @@
           <span class="state-label">age</span>
           <span class="state-value">{{ userStore.age }}</span>
         </div>
+        <div class="state-card">
+          <span class="state-label">count</span>
+          <span class="state-value">{{ useCountStore.count }}</span>
+        </div>
+        <div class="state-card">
+          <span class="state-label">doubleCount</span>
+          <span class="state-value">{{ useCountStore.doubleCount }}</span>
+        </div>
         <div class="state-card state-card--getter">
           <span class="state-label">info (getter)</span>
           <span class="state-value">{{ userStore.info }}</span>
@@ -61,17 +69,19 @@
 </template>
 
 <script setup>
-import { useUserStore } from '@/store/user'
+import { useUserStore,countStore } from '@/store/user'
 import vueCode from '!!raw-loader!@/views/Level5/ViewPinia.vue?raw'
 import jsCode from '!!raw-loader!@/store/user'
 import jsCode2 from '!!raw-loader!@/main.js'
 
 const userStore = useUserStore()
+const useCountStore = countStore()
 
 function changeState() {
   userStore.name = '尼古拉'
   userStore.age++
   userStore.add()
+  useCountStore.increment();
 }
 </script>
 

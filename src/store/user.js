@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-
+import { ref,computed } from "vue";
 export const useUserStore = defineStore(
   "user",
 
@@ -23,3 +23,26 @@ export const useUserStore = defineStore(
     },
   },
 );
+
+/*setup store函数式写法*/
+export const countStore = defineStore("count", ()=>{
+
+  const count = ref(0);
+
+  const doubleCount = computed(() => {
+    return count.value * 2;
+  });
+
+  /*increment函数用于增加count的值*/
+  const increment = () => {
+    count.value++;
+  };
+  /*返回count和increment函数*/
+  return {
+    count,
+    doubleCount,
+    increment,
+  };
+
+
+});
