@@ -9,7 +9,7 @@ export const useUserStore = defineStore(
 
       age: 20,
     }),
-
+    persist: true,//持久化存储，存储到本地localStorage
     getters: {
       info(state) {
         return state.name + "-" + state.age;

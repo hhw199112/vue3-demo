@@ -2,7 +2,7 @@
   <div class="vue-vmodel">
     <!-- 页面标题 -->
     <header class="page-header">
-      <h2>Vue3 自定义组件 v-model</h2>
+      <h2>Vue3 v-model 底层原理</h2>
 
       <p class="page-desc">
         Vue3 支持在自定义组件上使用 v-model， 本质上是父组件通过 modelValue

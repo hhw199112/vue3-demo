@@ -109,6 +109,7 @@
 
 import {
   ref,
+  onBeforeMount,
   onMounted,
   onBeforeUnmount,
   onUnmounted
@@ -120,8 +121,12 @@ const text = ref("等待加载")
 
 const logs = ref([])
 
-onMounted(() => {
+onBeforeMount(()=>{
+  alert("onBeforeMount 执行")
+})
 
+onMounted(() => {
+  alert("onMounted 执行")
   text.value = "页面加载完成"
 
   logs.value.push("onMounted 执行")
@@ -129,7 +134,7 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
-
+  alert("onBeforeUnmount 执行")
   logs.value.push("onBeforeUnmount 执行")
 
 })

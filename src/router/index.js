@@ -253,7 +253,7 @@ const routes = [
         meta: {
           group: "Level2",
           groupName: "Composition API",
-          subtitle: "nextTick的使用",
+          subtitle: "NextTick的使用",
           title: "Vue3 nextTick() 使用详解：DOM 更新机制、获取最新 DOM、滚动到底部示例 | vue3.tech",
           description: "Vue3 nextTick() 的完整教程，讲解 Vue 的异步 DOM 更新机制，并通过示例对比未使用与使用 nextTick() 的差异，展示如何获取最新 DOM、自动滚动到底部、处理列表更新等常见场景，附带完整源码示例。",
           keywords: "Vue3 nextTick, DOM 更新, Vue3 异步更新, 获取最新 DOM, Vue3 滚动到底部, Vue3 教程, Vue3 组合式API"
@@ -268,7 +268,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "defineProps",
+          subtitle: "DefineProps",
           title: "Vue3 defineProps 使用详解：父子组件通信、Props 特点与完整示例 | vue3.tech",
           description: "Vue3 defineProps 的完整教程，讲解父组件向子组件传递数据的方式、Props 的核心特点、子组件展示逻辑，并通过商品名称示例演示父子组件通信的响应式更新机制，附带完整源码文件。",
           keywords: "Vue3 defineProps, Vue3 Props, 父子组件通信, Vue3 组件传值, Vue3 教程, Vue3 组合式API"
@@ -281,7 +281,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "defineEmits",
+          subtitle: "DefineEmits",
           title: "Vue3 defineEmits 使用详解：子组件向父组件发送事件与参数回传示例 | vue3.tech",
           description: "Vue3 defineEmits 的完整教程，讲解子组件如何通过 emit() 向父组件发送事件，包括 send、delete、delete-with-id、delete-by-props-id 等多种事件触发方式，并展示父组件如何接收参数与处理逻辑，附带完整父子组件源码示例。",
           keywords: "Vue3 defineEmits, Vue3 emit, 子组件向父组件通信, Vue3 事件传递, Vue3 组件通信, Vue3 教程"
@@ -320,7 +320,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "Expose",
+          subtitle: "DefineExpose",
           title: "Vue3 defineExpose 使用详解：父组件调用子组件方法与变量的完整示例 | vue3.tech",
           description: "Vue3 defineExpose 的完整教程，讲解如何在 script setup 中向父组件公开变量与方法，使父组件能够通过 ref 获取子组件实例并调用其公开成员。包含方法调用示例、变量读取示例，以及父子组件完整源码展示。",
           keywords: "Vue3 defineExpose, Vue3 子组件方法, Vue3 父组件调用子组件, Vue3 组件实例, Vue3 教程, Vue3 组合式API"
@@ -385,7 +385,7 @@ const routes = [
         meta: {
           group: "Level3",
           groupName: "Vue3组件通信",
-          subtitle: "V-Model",
+          subtitle: "V-Model底层原理",
           title: "Vue3 自定义组件 v-model 使用详解：双向绑定机制与完整示例 | vue3.tech",
           description: "Vue3 自定义组件 v-model 的完整教程，讲解 v-model 的底层原理（modelValue + update:modelValue），并通过 UserInput 示例展示父子组件之间的双向绑定机制。包含多个 v-model 的使用说明、常见应用场景以及完整源码展示。",
           keywords: "Vue3 v-model, 自定义组件 v-model, modelValue, update:modelValue, Vue3 双向绑定, Vue3 Input 组件, Vue3 教程"
