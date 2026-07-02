@@ -2,7 +2,7 @@
   <div class="vue-pinia">
     <header class="pinia-header">
       <h2>Pinia 状态演示</h2>
-      <p class="pinia-desc">通过 Store 管理共享状态，支持 state、getters 与 actions。</p>
+      <p class="pinia-desc">通过 Store 管理共享状态，支持 state、getters、actions 与 持久化存储。</p>
     </header>
 
     <section class="state-section">
@@ -45,6 +45,16 @@
           </div>
           <pre class="code-block"><code>{{ jsCode }}</code></pre>
         </div>
+
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-filename">main.js</span>
+          </div>
+          <pre class="code-block"><code>{{ jsCode2 }}</code></pre>
+        </div>
       </div>
     </section>
   </div>
@@ -54,6 +64,7 @@
 import { useUserStore } from '@/store/user'
 import vueCode from '!!raw-loader!@/views/Level5/ViewPinia.vue?raw'
 import jsCode from '!!raw-loader!@/store/user'
+import jsCode2 from '!!raw-loader!@/main.js'
 
 const userStore = useUserStore()
 

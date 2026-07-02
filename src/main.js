@@ -5,7 +5,7 @@ import { createPinia } from "pinia";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate"
 const app = createApp(App);
 const pinia = createPinia();
-pinia.use(piniaPluginPersistedstate);
+pinia.use(piniaPluginPersistedstate);//使用pinia持久化存储插件
 app.use(pinia);
 app.use(router);
 app.mount("#app");
