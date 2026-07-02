@@ -29,10 +29,12 @@ export const countStore = defineStore("count", ()=>{
 
   const count = ref(0);
 
+  /*相当于getters*/
   const doubleCount = computed(() => {
     return count.value * 2;
   });
 
+  /*相当于actions*/
   /*increment函数用于增加count的值*/
   const increment = () => {
     count.value++;
