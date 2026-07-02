@@ -87,6 +87,7 @@ function changeName() {
 
 const total = computed(() => num.value * price.value)
 
+// watch 监听 num 变化,第一个是新值，第二个是旧值
 watch(num, (newVal, oldVal) => {
   text.value = `原始值：${oldVal}  新值：${newVal}`
 })

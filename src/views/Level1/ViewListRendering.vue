@@ -28,8 +28,9 @@
   
         <div class="demo-card">
           <ul>
-            <li v-for="(item,index) in names" :key="item">
-              {{ index }} — {{ item }}
+            <!-- 循环names数组，第一个1itemVal是数组元素，第二个参数indexVal是数组索引 -->
+            <li v-for="(itemVal,indexVal) in names" :key="itemVal">
+              {{ indexVal }} — {{ itemVal }}
             </li>
           </ul>
         </div>
@@ -66,6 +67,7 @@
   
         <div class="demo-card">
           <ul>
+            <!-- 循环person对象，第一个参数value是对象的值，第二个参数key是对象的键 -->
             <li v-for="(value,key) in person" :key="key">
               {{ key }} ： {{ value }}
             </li>
